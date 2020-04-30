@@ -237,7 +237,7 @@ class GSEAbase(object):
         for gs in top_term:
             hit = results.get(gs)['hit_indices']
             NES = 'nes' if self.module != 'ssgsea' else 'es'
-            term = gs.replace('/','_').replace(":","_").replace(" ","_")
+            term = gs.replace('/','_').replace(":","_").replace(" ","_").replace("(","_").replace(")","_").replace("[","_").replace("]","_")
             outfile = '{0}/{1}.{2}.{3}'.format(self.outdir, term, self.module, self.format)
             gseaplot(rank_metric=rank_metric, term=term, hit_indices=hit,
                       nes=results.get(gs)[NES], pval=results.get(gs)['pval'], 
