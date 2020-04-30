@@ -152,13 +152,13 @@ class GSEAbase(object):
                                   for line in genesets.readlines()}
             return genesets_dict
 
-        elif gmt in DEFAULT_LIBRARY:
-            pass
-        elif gmt in self.get_libraries():
-            pass
-        else:
-            self._logger.error("No supported gene_sets: %s"%gmt)
-            sys.exit(0)
+        # elif gmt in DEFAULT_LIBRARY:
+        #     pass
+        # elif gmt in self.get_libraries():
+        #     pass
+        # else:
+        #     self._logger.error("No supported gene_sets: %s"%gmt)
+        #     sys.exit(0)
 
         tmpname = "enrichr." + gmt + ".gmt"
         tempath = os.path.join(DEFAULT_CACHE_PATH, tmpname)
