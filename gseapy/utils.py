@@ -5,7 +5,7 @@ from requests.packages.urllib3.util.retry import Retry
 from requests.adapters import HTTPAdapter
 from os.path import expanduser
 
-DEFAULT_CACHE_PATH = os.path.join(expanduser("~"), ".gseapy")
+DEFAULT_CACHE_PATH = os.path.join("/opt", "gseapy")
 
 def unique(seq):
     """Remove duplicates from a list in Python while preserving order.
